@@ -1,10 +1,10 @@
 from selenium import webdriver
 
-def login_auto():
-    wp_login = 'https://adboub.internet-sicherheit.de/wp-login.php'
-    wp_admin = 'https://adboub.internet-sicherheit.de/wp-admin/'
-    username = 'ifis2'
-    password = 'tRjo%EEwzZ81jY&2ZesSLY87'
+def site_login_cookies():
+    wp_login = 'https://wordpresssite/wp-login.php'
+    wp_admin = 'https://wordpresssite/wp-admin/'
+    username = 'yourusername'
+    password = 'yourpasswort'
 
     with requests.Session() as s:
         headers1 = { 'Cookie':'wordpress_test_cookie=WP Cookie check' }
@@ -17,12 +17,12 @@ def login_auto():
         print(resp.text)
 
 
-def login_automation():
+def site_login():
 
-    username = 'ifis2'
-    password = 'tRjo%EEwzZ81jY&2ZesSLY87'
+    username = 'yourusername'
+    password = 'yourpasswort'
     driver = webdriver.chrome('chromedriver.exe')
-    driver.get('https://adboub.internet-sicherheit.de/wp-login.php')
+    driver.get('https://wordpresssite/wp-login.php')
 
     user_input = driver.find_element_by_id('user_login')
     user_input.send_keys(username)
