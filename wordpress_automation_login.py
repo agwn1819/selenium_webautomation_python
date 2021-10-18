@@ -35,7 +35,7 @@ def site_login():
 
 
 def main():
-    login_automation()
+    site_login()
     
 
 if __name__ == "__main__":
